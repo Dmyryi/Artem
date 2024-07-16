@@ -1,0 +1,271 @@
+@charset "UTF-8";
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+/* reset.scss */
+/* Reset styles */
+html,
+body,
+h1,
+h2,
+h3,
+p,
+a,
+img,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none; /* Убираем подчеркивания у ссылок */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* Учитываем padding и border в общей ширине/высоте элемента */
+}
+
+/* Basic styling */
+body {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  background-color: #f0f0f0;
+  color: #ffffff; /* Цвет текста по умолчанию */
+}
+
+.header__logo {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+ul {
+  list-style-type: none; /* Убираем маркеры у всех списков */
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: #ffffff;
+  color: #020202;
+  padding: 30px 0;
+}
+
+nav {
+  display: inline-block;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.video__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.video__list li {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%; /* Три элемента в строке, с небольшими отступами */
+  /* Отступы между строками */
+}
+
+.video__list li a {
+  color: #333;
+  position: relative;
+  display: grid; /* Чтобы изображение занимало весь li */
+}
+
+.video__list li a img {
+  width: 100%; /* Полная ширина изображения */
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* Фит изображения */
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease; /* Плавный переход при наведении */
+}
+
+.video__list li a:hover img {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%); /* Затемнение изображения при наведении */
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1); /* Увеличение при наведении */
+}
+
+.video__list li .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; /* Плавный переход */
+}
+
+.video__list li:hover .overlay {
+  opacity: 1; /* Показывать overlay при наведении */
+}
+
+.overlay-text {
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@-webkit-keyframes text {
+  0% {
+    color: rgba(0, 0, 0, 0);
+  }
+  30% {
+    letter-spacing: 5px;
+  }
+}
+
+@keyframes text {
+  0% {
+    color: rgba(0, 0, 0, 0);
+  }
+  30% {
+    letter-spacing: 5px;
+  }
+}
+.video__list li .overlay-text {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; /* Плавный переход */
+}
+
+.video__list li:hover .overlay-text {
+  opacity: 1;
+  -webkit-animation: text 2s 1;
+          animation: text 2s 1; /* Воспроизведение анимации */
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.nav__list-item {
+  display: inline-block; /* Размещаем элементы списка в одну строку */
+  /* Расстояние между элементами списка */
+}
+
+.nav__list-item:first-child {
+  margin-left: 0; /* Убираем отступ слева у первого элемента списка */
+}
+
+.nav__list-item a {
+  text-decoration: none; /* Убираем стандартное подчеркивание */
+  color: #333; /* Цвет текста ссылок */
+  font-weight: 400; /* Жирный шрифт */
+  font-size: 1.2rem; /* Размер шрифта */
+  -webkit-transition: color 0.3s ease, border-bottom-color 0.3s ease, border-top-color 0.3s ease;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease, border-top-color 0.3s ease; /* Плавный переход цвета текста и цвета подчеркивания */
+  border-bottom: 2px solid transparent; /* Прозрачная черта */
+}
+
+.nav__list-item a:hover {
+  /* Изменение цвета текста при наведении */
+  border-bottom-color: #333; /* Цвет подчеркивания при наведении */
+}
+
+.about__text {
+  color: #333;
+  width: 400px;
+}
+
+.about__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about__div-buttons {
+  display: block;
+  width: 450px;
+}
+
+.about__button {
+  width: 120px;
+  height: 50px;
+  border: 2px solid #333;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  background: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.about__button:hover {
+  color: #ffffff;
+  -webkit-transition: 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  background-color: #333;
+}
+
+.about__divtext {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.about__buttons-item {
+  margin-right: 10px;
+  margin-top: 10px;
+}

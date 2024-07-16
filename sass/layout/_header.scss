@@ -1,0 +1,31 @@
+.header {
+	display: flex;
+	align-items: center;
+}
+
+.nav {
+	margin-left: auto;
+}
+.nav__list-item {
+	display: inline-block; /* Размещаем элементы списка в одну строку */
+	/* Расстояние между элементами списка */
+}
+
+.nav__list-item:first-child {
+	margin-left: 0; /* Убираем отступ слева у первого элемента списка */
+}
+
+.nav__list-item a {
+	text-decoration: none; /* Убираем стандартное подчеркивание */
+	color: #333; /* Цвет текста ссылок */
+	font-weight: 400; /* Жирный шрифт */
+	font-size: 1.2rem; /* Размер шрифта */
+	transition: color 0.3s ease, border-bottom-color 0.3s ease,
+		border-top-color 0.3s ease; /* Плавный переход цвета текста и цвета подчеркивания */
+	border-bottom: 2px solid transparent; /* Прозрачная черта */
+}
+
+.nav__list-item a:hover {
+	/* Изменение цвета текста при наведении */
+	border-bottom-color: #333; /* Цвет подчеркивания при наведении */
+}
