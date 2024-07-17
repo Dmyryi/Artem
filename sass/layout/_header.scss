@@ -5,7 +5,16 @@
 
 .nav {
 	margin-left: auto;
+	opacity: 0;
+	transition: opacity 1.4s ease, transform 1s ease; /* Add transform transition */
+	transform: translate(20%, 0px);
 }
+
+.nav._active {
+	transform: translateX(0%);
+	opacity: 1;
+}
+
 .nav__list-item {
 	display: inline-block; /* Размещаем элементы списка в одну строку */
 	/* Расстояние между элементами списка */
@@ -20,12 +29,16 @@
 	color: #333; /* Цвет текста ссылок */
 	font-weight: 400; /* Жирный шрифт */
 	font-size: 1.2rem; /* Размер шрифта */
-	transition: color 0.3s ease, border-bottom-color 0.3s ease,
-		border-top-color 0.3s ease; /* Плавный переход цвета текста и цвета подчеркивания */
+	transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Плавный переход цвета текста и цвета подчеркивания */
 	border-bottom: 2px solid transparent; /* Прозрачная черта */
+}
+
+.nav__list-item a.border-bottom {
+	border-bottom: 2px solid #333; /* Постоянное подчеркивание */
 }
 
 .nav__list-item a:hover {
 	/* Изменение цвета текста при наведении */
 	border-bottom-color: #333; /* Цвет подчеркивания при наведении */
+	transition-timing-function: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }

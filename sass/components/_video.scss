@@ -2,8 +2,15 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	opacity: 0;
+	transition: opacity 1s ease, transform 1s ease; /* Add transform transition */
+	transform: translate(0px, 10%); /* Initial transform state */
 }
 
+.video__list._active {
+	transform: translateY(0%);
+	opacity: 1;
+}
 .video__list li {
 	text-align: center;
 	position: relative;

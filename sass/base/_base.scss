@@ -35,6 +35,15 @@ body {
 .header__logo {
 	font-size: 2rem;
 	font-weight: 500;
+	color: #000000;
+	opacity: 0;
+	transition: opacity 1.4s ease, transform 1s ease; /* Add transform transition */
+	transform: translate(-120%, 0px);
+}
+
+.header__logo._active {
+	transform: translateX(0%);
+	opacity: 1;
 }
 
 ul {
