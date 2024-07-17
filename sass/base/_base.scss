@@ -22,6 +22,17 @@ li {
 	box-sizing: border-box; /* Учитываем padding и border в общей ширине/высоте элемента */
 }
 
+@font-face {
+	font-family: 'Futura PT Demi';
+	src: url('FuturaPT-DemiObl.eot');
+	src: local('Futura PT Demi Oblique'), local('FuturaPT-DemiObl'),
+		url('FuturaPT-DemiObl.eot?#iefix') format('embedded-opentype'),
+		url('FuturaPT-DemiObl.woff2') format('woff2'),
+		url('FuturaPT-DemiObl.woff') format('woff'),
+		url('FuturaPT-DemiObl.ttf') format('truetype');
+	font-weight: 600;
+	font-style: italic;
+}
 /* Basic styling */
 body {
 	font-family: 'Raleway', sans-serif;

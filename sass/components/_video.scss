@@ -15,7 +15,7 @@
 	text-align: center;
 	position: relative;
 	overflow: hidden;
-	flex: calc(50%); /* Три элемента в строке, с небольшими отступами */
+	// flex: calc(50%); /* Три элемента в строке, с небольшими отступами */
 	/* Отступы между строками */
 }
 
@@ -79,4 +79,10 @@
 .video__list li:hover .overlay-text {
 	opacity: 1;
 	animation: text 2s 1; /* Воспроизведение анимации */
+}
+
+@media (min-width: 768px) {
+	.video__list li {
+		flex: calc(50%);
+	}
 }
