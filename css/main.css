@@ -620,12 +620,6 @@ nav a {
   list-style: none; /* Remove default list styling */
   padding: 0; /* Remove default padding */
   margin: 0; /* Remove default margin */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; /* Center the list items */
 }
 
 .footer__item {
