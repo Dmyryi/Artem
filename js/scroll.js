@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				if (animItemHeight > window.innerHeight) {
 					animItemPoint = window.innerHeight - window.innerHeight / animStart
 				}
+				d
 
 				if (
 					pageYOffset > animItemOffset - animItemPoint &&
